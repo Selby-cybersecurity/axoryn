@@ -1,11 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Axoryn Robotics</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axoryn Robotics | We Endure, We Build, We Rise</title>
+    <style>
+        /* CSS: Professional Industrial Aesthetic */
+        :root {
+            --bg-dark: #0f141a; /* Deep Navy from logo background */
+            --accent-cyan: #5bc0de; /* Bright cyan from the circuitry */
+            --metallic-silver: #c0c0c0; /* Silver from the gears */
+            --text-gray: #a0a0a0;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-dark);
+            color: white;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a2530 0%, #0f141a 100%);
+            padding: 20px;
+        }
+
+        .logo-container img {
+            width: 280px; /* Adjust based on your preference */
+            height: auto;
+            filter: drop-shadow(0 0 15px rgba(91, 192, 222, 0.3));
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin: 10px 0;
+            color: var(--metallic-silver);
+        }
+
+        .motto {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 1.5s forwards 0.5s;
+        }
+
+        /* Content Section */
+        .info-section {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 40px;
+            border-left: 2px solid var(--accent-cyan);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        h2 {
+            color: var(--accent-cyan);
+            font-size: 1.8rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            padding: 20px;
+            border: 1px solid rgba(192, 192, 192, 0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--accent-cyan);
+            background: rgba(91, 192, 222, 0.05);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Button */
+        .btn {
+            margin-top: 40px;
+            padding: 15px 40px;
+            border: 1px solid var(--metallic-silver);
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            transition: 0.4s;
+        }
+
+        .btn:hover {
+            background: white;
+            color: black;
+        }
+    </style>
 </head>
 <body>
-  <h1>Axoryn Robotics</h1>
-  <p>Building autonomous robotic systems.</p>
+
+    <header>
+        <div class="logo-container">
+            <img src="actual logo.jpg" alt="Axoryn Robotics Logo">
+        </div>
+        <h1>AXORYN</h1>
+        <div class="motto">We Endure • We Build • We Rise</div>
+        <a href="#about" class="btn">Explore Tech</a>
+    </header>
+
+    <section id="about" class="info-section">
+        <h2>Autonomous Excellence</h2>
+        <p>Axoryn Robotics is dedicated to pushing the boundaries of mechanical endurance and intelligent automation. We specialize in robust systems designed to thrive in complex environments.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Endurance</h3>
+                <p>Built for long-cycle operations with high-grade metallic components.</p>
+            </div>
+            <div class="card">
+                <h3>Build</h3>
+                <p>Precision engineering meets modular hardware architecture.</p>
+            </div>
+            <div class="card">
+                <h3>Rise</h3>
+                <p>Scalable AI solutions that elevate industrial standards.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth reveal on scroll
+        window.addEventListener('scroll', () => {
+            const section = document.querySelector('.info-section');
+            const sectionPos = section.getBoundingClientRect().top;
+            const screenPos = window.innerHeight / 1.3;
+
+            if (sectionPos < screenPos) {
+                section.style.opacity = "1";
+                section.style.transition = "2s";
+            }
+        });
+    </script>
+
 </body>
 </html>
